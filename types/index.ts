@@ -4,7 +4,6 @@ export interface PostsProps{
     body: string,
     reaction: number,
     tags: string[];
-    length: number;
 }
 
 export interface APIresponse {
