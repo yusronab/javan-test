@@ -21,7 +21,7 @@ export default function Home() {
   }, [])
 
   const itemsPerPage = 10;
-  const totalPages = Math.ceil(posts!.length / itemsPerPage);
+  const totalPages = Math.ceil(posts?.length / itemsPerPage);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -34,7 +34,7 @@ export default function Home() {
   const handleFilter = (filter: string, search: string) => {
     const filteredData = posts?.filter((post) => {
       const includesCategory = post.tags.includes(filter);
-      const includesSearch = post.title.toLowerCase().includes(search.toLowerCase()); // Memeriksa apakah pencarian terdapat dalam judul post
+      const includesSearch = post.title.toLowerCase().includes(search.toLowerCase());
 
       if (filter === '') {
         return includesSearch;
