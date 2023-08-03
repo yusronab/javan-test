@@ -21,7 +21,7 @@ export default function Home() {
   }, [])
 
   const itemsPerPage = 10;
-  const totalPages = Math.ceil(posts!.length / itemsPerPage);
+  const totalPages = posts ? Math.ceil(posts.length / itemsPerPage) : 0;
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
